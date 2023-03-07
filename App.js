@@ -1,23 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      
-      <View style={styles.carContainer}> 
-        
+      <View style={styles.carContainer}>
         <ImageBackground
-          source={require('./assets/images/ModelX.jpeg')}
+          source={require("./assets/images/ModelX.jpeg")}
           style={styles.image}
         />
         <View style={styles.titles}>
           <Text style={styles.title}>Model S</Text>
           <Text style={styles.subtitle}>Starting at $69,420</Text>
         </View>
-    </View>
-
+      </View>
+      <View style={styles.container}>
+        <View style={styles.carContainer}>
+          <ImageBackground
+            source={require("./assets/images/Model3.jpeg")}
+            style={styles.image}
+          />
+          <View style={styles.titles}>
+            <Text style={styles.title}>Model 3</Text>
+            <Text style={styles.subtitle}>Starting at $69,420</Text>
+          </View>
+        </View>
+      </View>
 
       <StatusBar style="auto" />
     </View>
@@ -47,12 +56,12 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    color: '#5c5e62',
+    color: "#5c5e62",
   },
   image: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-    position: 'absolute',
-  }
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    position: "absolute",
+  },
 });
